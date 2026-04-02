@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Pelangi Aqiqah"
+version = "1.0.0"
+id = "artifacts/pelangi-aqiqah"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 25245
+
+[services.development]
+run = "pnpm --filter @workspace/pelangi-aqiqah run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/pelangi-aqiqah", "run", "build" ]
+publicDir = "artifacts/pelangi-aqiqah/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25245"
+BASE_PATH = "/"
