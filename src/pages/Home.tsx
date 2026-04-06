@@ -774,7 +774,9 @@ function ContactSection() {
                   </div>
                   <div>
                     <h4 className='font-semibold text-white/70'>WhatsApp</h4>
-                    <p className='text-xl font-bold'>0856-0606-0505 (Asiah)</p>
+                    <p className='text-xl font-bold'>
+                      0813-8407-2641 (Customer Service)
+                    </p>
                   </div>
                 </div>
 
