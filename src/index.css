@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 @plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:is(.dark *));
@@ -51,20 +51,20 @@
 }
 
 :root {
-  --button-outline: rgba(0,0,0, .10);
-  --badge-outline: rgba(0,0,0, .05);
+  --button-outline: rgba(0, 0, 0, 0.1);
+  --badge-outline: rgba(0, 0, 0, 0.05);
   --opaque-button-border-intensity: -8;
 
-  --elevate-1: rgba(0,0,0, .03);
-  --elevate-2: rgba(0,0,0, .08);
+  --elevate-1: rgba(0, 0, 0, 0.03);
+  --elevate-2: rgba(0, 0, 0, 0.08);
 
   /* Warm Cream / Amber Palette */
   --background: 42 60% 98%; /* #fdfbf7 */
   --foreground: 15 22% 16%; /* #312824 */
 
-  --border: 33 30% 88%; 
+  --border: 33 30% 88%;
   --input: 33 30% 88%;
-  --ring: 28 85% 45%; 
+  --ring: 28 85% 45%;
 
   --card: 0 0% 100%;
   --card-foreground: 15 22% 16%;
@@ -77,7 +77,7 @@
   --primary: 28 85% 45%; /* Deep amber/orange-brown */
   --primary-foreground: 0 0% 100%;
 
-  --secondary: 35 45% 90%; 
+  --secondary: 35 45% 90%;
   --secondary-foreground: 20 25% 25%;
 
   --muted: 42 30% 93%;
@@ -92,7 +92,7 @@
   --app-font-sans: 'Nunito', sans-serif;
   --app-font-serif: 'Playfair Display', serif;
   --app-font-mono: Menlo, monospace;
-  
+
   --radius: 0.75rem;
 
   --shadow-sm: 0px 2px 4px rgba(49, 40, 36, 0.05);
@@ -106,9 +106,9 @@
   /* No dark mode for this specific landing page, force light mode palette */
   --background: 42 60% 98%;
   --foreground: 15 22% 16%;
-  --border: 33 30% 88%; 
+  --border: 33 30% 88%;
   --input: 33 30% 88%;
-  --ring: 28 85% 45%; 
+  --ring: 28 85% 45%;
   --card: 0 0% 100%;
   --card-foreground: 15 22% 16%;
   --card-border: 33 30% 88%;
@@ -130,11 +130,17 @@
 @layer base {
   * {
     @apply border-border;
+    scroll-behavior: smooth;
   }
   body {
     @apply font-sans antialiased bg-background text-foreground;
   }
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-serif;
   }
 }
